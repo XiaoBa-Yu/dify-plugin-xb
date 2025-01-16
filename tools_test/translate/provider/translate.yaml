@@ -1,0 +1,17 @@
+identity:
+  author: xiaoba_yu
+  name: translate_xb
+  label:
+    en_US: translate
+    zh_Hans: translate
+    pt_BR: translate
+  description:
+    en_US: this is a test plugin
+    zh_Hans: this is a test plugin
+    pt_BR: this is a test plugin
+  icon: icon.svg
+tools:
+  - tools/translate.yaml
+extra:
+  python:
+    source: provider/translate.py

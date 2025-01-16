@@ -1,0 +1,30 @@
+identity:
+  name: translate_xb
+  author: xiaoba_yu
+  label:
+    en_US: translate
+    zh_Hans: translate
+    pt_BR: translate
+description:
+  human:
+    en_US: this is a test plugin
+    zh_Hans: this is a test plugin
+    pt_BR: this is a test plugin
+  llm: this is a test plugin
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: this is a test plugin
+      zh_Hans: this is a test plugin
+      pt_BR: this is a test plugin
+    llm_description: this is a test plugin
+    form: llm
+extra:
+  python:
+    source: tools/translate.py
