@@ -12,19 +12,32 @@ description:
     pt_BR: this is a test plugin
   llm: this is a test plugin
 parameters:
-  - name: query
-    type: string
-    required: true
-    label:
-      en_US: Query string
-      zh_Hans: 查询语句
-      pt_BR: Query string
+  - form: llm
     human_description:
-      en_US: this is a test plugin
-      zh_Hans: this is a test plugin
-      pt_BR: this is a test plugin
-    llm_description: this is a test plugin
-    form: llm
+      en_US: Upload an audio file to transcribe. Supports mp3, mp4, mpeg, mpga, m4a,
+        wav, or webm formats.
+      zh_Hans: 上传要转录的文件。支持 mp3、mp4、mpeg、mpga、m4a、wav 或 webm 格式。
+    label:
+      en_US: Audio File
+      zh_Hans: 文件
+    llm_description: 'Audio file to transcribe. Supported formats: mp3, mp4, mpeg, mpga,
+      m4a, wav, or webm.'
+    name: files
+    required: true
+    type: file
+  - default: ''
+    form: form
+    human_description:
+      en_US:
+        It is free to integrate with and test out the API in test mode, no subscription
+        required.
+      zh_Hans: 下载文件域名。
+    label:
+      en_US: Mode
+      zh_Hans: 文件域名
+    name: mode
+    required: false
+    type: string
 extra:
   python:
     source: tools/translate.py
