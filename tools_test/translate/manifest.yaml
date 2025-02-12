@@ -3,15 +3,14 @@ type: plugin
 author: xiaoba_yu
 name: translate_xb
 label:
-  en_US: translate
-  ja_JP: translate
-  zh_Hans: translate
-  pt_BR: translate
+  en_US: MarkItdown
+  ja_JP: MarkItdown
+  zh_Hans: MarkItdown
+  pt_BR: MarkItdown
 description:
-  en_US: this is a test plugin
-  ja_JP: this is a test plugin
-  zh_Hans: this is a test plugin
-  pt_BR: this is a test plugin
+  en_US: Translate to Markdown
+  zh_Hans: Translate to Markdown
+  pt_BR: Translate to Markdown
 icon: icon.svg
 tags: 
     - search

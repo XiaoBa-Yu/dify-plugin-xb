@@ -2,40 +2,45 @@ identity:
   name: translate_xb
   author: xiaoba_yu
   label:
-    en_US: translate
-    zh_Hans: translate
-    pt_BR: translate
+    en_US: Translate to Markdown
+    zh_Hans: Translate to Markdown
+    pt_BR: Translate to Markdown
 description:
   human:
-    en_US: this is a test plugin
-    zh_Hans: this is a test plugin
-    pt_BR: this is a test plugin
-  llm: this is a test plugin
+    en_US: This plugin converts various files to Markdown format.
+    zh_Hans: 这个插件将各种文件转换为Markdown格式。
+    pt_BR: Este plugin converte vários arquivos para o formato Markdown.
+  llm: This plugin converts various files to Markdown format.
 parameters:
   - form: llm
     human_description:
-      en_US: Upload an audio file to transcribe. Supports mp3, mp4, mpeg, mpga, m4a,
-        wav, or webm formats.
-      zh_Hans: 上传要转录的文件。支持 mp3、mp4、mpeg、mpga、m4a、wav 或 webm 格式。
+      en_US: Upload a file to convert to Markdown. Supports various formats.
+      zh_Hans: 上传要转换为Markdown的文件。支持多种格式。
     label:
-      en_US: Audio File
+      en_US: File
       zh_Hans: 文件
-    llm_description: 'Audio file to transcribe. Supported formats: mp3, mp4, mpeg, mpga,
-      m4a, wav, or webm.'
+    llm_description: 'File to convert to Markdown. Supported formats: various.'
     name: files
     required: true
     type: file
-  - default: ''
-    form: form
+  - form: form
     human_description:
-      en_US:
-        It is free to integrate with and test out the API in test mode, no subscription
-        required.
+      en_US: Download file domain.
       zh_Hans: 下载文件域名。
     label:
-      en_US: Mode
+      en_US: Domain
       zh_Hans: 文件域名
-    name: mode
+    name: domain
+    required: false
+    type: string
+  - form: form
+    human_description:
+      en_US: To use Large Language Models for image descriptions, provide llm_client and llm_model.
+      zh_Hans: 要使用大型语言模型进行图像描述，请提供 llm_client 和 llm_model。
+    label:
+      en_US: Model Name
+      zh_Hans: 模型名称
+    name: model
     required: false
     type: string
 extra:
