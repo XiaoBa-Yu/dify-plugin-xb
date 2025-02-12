@@ -12,7 +12,7 @@ credentials_for_provider:
       en_US: Please input your OpenAI API key
       pt_BR: Please input your OpenAI API key
       zh_Hans: 请输入你的 OpenAI API key
-    required: true
+    required: false
     type: secret-input
   openai_base_url:
     help:
